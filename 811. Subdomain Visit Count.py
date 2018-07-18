@@ -9,17 +9,11 @@ class Solution:
         for inp in cpdomains:
             val = inp.split()
             count = val[0]
-            sub = list(reversed(val[1].split('.')))
+            sub = reversed(val[1].split('.'))
             curr = ''
             for dom in sub:
-                if len(curr):
-                    curr = dom + '.' + curr
-                else:
-                    curr = dom
-                if curr in domain:
-                    domain[curr] += int(count)
-                else:
-                    domain[curr] = int(count)
+                curr = dom + '.' + curr if len(curr) else dom
+                domain[curr] = domain[curr] + int(count) if curr in domain else int(count)
         for key,val in domain.items():
             ans.append(str(val)+' '+key)
         return ans
