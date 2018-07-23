@@ -2,7 +2,8 @@ class Solution:
     def reverseBits(self, n):
         ans = 0
         for i in range(32):
-            ans += (n & 2**i)>>i
+            ans += n & 1
+            n >>=1
             ans <<=1 
         return ans>>1
 
