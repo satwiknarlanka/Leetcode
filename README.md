@@ -11,3 +11,4 @@ https://leetcode.com/problems/3sum-closest/description/
 
 https://leetcode.com/problems/add-digits/description/ in O(1)  
 https://leetcode.com/problems/super-ugly-number/description/ with heapq  
+https://leetcode.com/problems/replace-words/description/ with Trie
